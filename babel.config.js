@@ -1,3 +1,5 @@
+const components = require('prismjs/components')
+const allLanguages = Object.keys(components.languages).filter((item) => item !== 'meta')
 module.exports = {
   presets: [
     // https://github.com/vuejs/vue-cli/tree/master/packages/@vue/babel-preset-app
@@ -10,5 +12,10 @@ module.exports = {
       // https://panjiachen.github.io/vue-element-admin-site/guide/advanced/lazy-loading.html
       'plugins': ['dynamic-import-node']
     }
-  }
+  },
+  'plugins': [
+    ['prismjs', {
+      'languages': allLanguages
+    }]
+  ]
 }

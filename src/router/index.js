@@ -89,7 +89,7 @@ export const constantRoutes = [
         path: '/manage/series',
         component: () => import('@/views/series/'), // Parent router-view
         name: 'SeriesManage',
-        meta: { title: '分类列表', icon: 'tree' }
+        meta: { title: '系列列表', icon: 'tree' }
       }
     ]
   },
