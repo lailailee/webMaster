@@ -1,12 +1,12 @@
 module.exports = {
 
-  title: `lailailee blog's master`,
+  title: `博客后台管理`,
 
   /**
    * @type {boolean} true | false
    * @description Whether fix the header
    */
-  fixedHeader: true,
+  fixedHeader: false,
 
   /**
    * @type {boolean} true | false
