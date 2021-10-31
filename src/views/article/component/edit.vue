@@ -58,6 +58,15 @@
               </template>
               <div class="collapse-wrapper">
                 <div>
+                  <div class="label">预览内容</div>
+                  <el-input
+                    v-model="form.overview"
+                    :autosize="{ minRows: 3, maxRows: 20 }"
+                    type="textarea"
+                    placeholder="请输入预览内容"
+                  />
+                </div>
+                <div>
                   <div class="label">选择标签</div>
                   <el-select
                     v-model="form.tags"
@@ -102,6 +111,7 @@
                     placeholder="请输入内容"
                   />
                 </div>
+
                 <div>
                   <div class="label">时间选择</div>
                   <el-date-picker
@@ -114,7 +124,6 @@
                     :default-value="new Date()"
                   />
                 </div>
-
               </div>
             </el-collapse-item>
           </el-collapse>
@@ -160,7 +169,8 @@ export default {
           seriesId: null,
           content: '',
           title: '',
-          tags: []
+          tags: [],
+          overview: ''
         }
       }
     },
@@ -182,7 +192,8 @@ export default {
         content: '',
         title: '',
         tags: [],
-        createdAt: ''
+        createdAt: '',
+        overview: ''
       },
       rules: {
         // name: [
